@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tahun Kabisat</title>
+</head>
+<body>
+    <h1>Tahun Kabisat</h1>
+    <ul>
+        <li>Tahun 4 adalah tahun kabisat? <span id="tahun4"></span></li>
+        <li>Tahun 8 adalah tahun kabisat? <span id="tahun8"></span></li>
+        <li>Tahun 100 adalah tahun kabisat? <span id="tahun100"></span></li>
+    </ul>
+
+    <script>
+        function isLeapYear(year) {
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                return true;
+            }
+            return false;
+        }
+
+        var tahun4 = isLeapYear(4);
+        var tahun8 = isLeapYear(8);
+        var tahun100 = isLeapYear(100);
+
+        document.getElementById("tahun4").textContent = tahun4 ? "Ya" : "Tidak";
+        document.getElementById("tahun8").textContent = tahun8 ? "Ya" : "Tidak";
+        document.getElementById("tahun100").textContent = tahun100 ? "Ya" : "Tidak";
+    </script>
+</body>
+</html>

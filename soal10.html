@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pesan Makanan dan Minuman</title>
+</head>
+<body>
+    <h1>Pesan Makanan dan Minuman</h1>
+    
+    <script>
+        var hargaMakanan = 25000; 
+        var hargaMinuman = 16000;  
+
+        var jumlahMakanan = parseInt(prompt("Masukkan jumlah makanan yang ingin dipesan:"));
+        var jumlahMinuman = parseInt(prompt("Masukkan jumlah minuman yang ingin dipesan:"));
+
+        var totalHargaMakanan = hargaMakanan * jumlahMakanan;
+        var totalHargaMinuman = hargaMinuman * jumlahMinuman;
+
+        var totalHarga = totalHargaMakanan + totalHargaMinuman;
+
+        alert("Total harga pesanan Anda adalah: " + totalHarga + " rupiah");
+    </script>
+</body>
+</html>

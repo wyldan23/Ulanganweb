@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Evaluasi Nilai</title>
+</head>
+<body>
+    <h1>Evaluasi Nilai</h1>
+    <label for="score">Masukkan nilai score:</label>
+    <input type="number" id="score">
+    <button onclick="evaluasiNilai()">Evaluasi</button>
+    <p id="hasil"></p>
+
+    <script>
+        function evaluasiNilai() {
+            var score = parseInt(document.getElementById("score").value);
+            var result;
+
+            if (score >= 90) {
+                result = 'Nilai A';
+            } else if (score >= 80 && score <= 89) {
+                result = 'Nilai B';
+            } else if (score >= 70 && score <= 79) {
+                result = 'Nilai C';
+            } else if (score >= 60 && score <= 69) {
+                result = 'Nilai D';
+            } else {
+                result = 'Nilai E';
+            }
+
+            document.getElementById("hasil").textContent = 'Hasil evaluasi: ' + result;
+        }
+    </script>
+</body>
+</html>
